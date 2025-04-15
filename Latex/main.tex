@@ -45,7 +45,7 @@ El segundo criterio corresponde a la diferencia entre \textbf{victorias reales} 
 
 \section*{Criterio 3: Relación entre pérdidas por posesión y derrotas}
 
-Un indicador importante del rendimiento ofensivo de los equipos es la \textbf{tasa de pérdidas por posesión (TOV\%)}, que muestra cuántas veces un equipo pierde el balón antes de lanzar al aro. Para evaluar su impacto en los resultados, se comparó este porcentaje con la cantidad total de derrotas de cada equipo en la temporada 2025.
+Un indicador importante del rendimiento ofensivo de los equipos es la \textbf{tasa de pérdidas por posesión (TOV\%)}, que muestra cuántas veces un equipo pierde el balón antes de lanzar al aro. Para evaluar su impacto en los resultados, se comparó este porcentaje con la cantidad total de derrotas de cada equipo en la temporada 2025 utilizando un \textit{lollipop_plot}.
 
 \begin{center}
     \includegraphics[width=0.8\textwidth]{lollipop_plot_tov_vs_derrotas.png}
@@ -55,7 +55,7 @@ Un indicador importante del rendimiento ofensivo de los equipos es la \textbf{ta
 
 \section*{Criterio 4: Distribución de Puntos por Partido según Posición y en distintos años.}
 
-En la NBA, cada posición tiene roles distintos por lo que es un buen análisis como se distribuyen los puntos según, en este caso, en temporadas muy alejadas. Se pueden observar como ha cambiado la forma del juego con los años debido a transformaciones tácticas, mayor ritmo de juego, incorporación de lanzamientos de triple, entre otros factores.
+En la NBA, cada posición tiene roles distintos por lo que es un buen análisis como se distribuyen los puntos según en este caso, en temporadas muy alejadas. Se pueden observar como ha cambiado la forma del juego con los años debido a transformaciones tácticas, mayor ritmo de juego, incorporación de lanzamientos de triple, entre otros factores para esto utilizamos un \textit{box_plot} para mejorar la visualización.
 
 
 \begin{center}
@@ -64,5 +64,33 @@ En la NBA, cada posición tiene roles distintos por lo que es un buen análisis 
 
 \textbf{Conclusión:} Se observó como el protagonismo de los puntos cambia totalmente, se pasa de un juego con mayor protagonismo de los Escoltas (SG) y Aleros (SF) en 1980, a una distribución mucho más pareja en 2024. También se observa un aumento en la cantidad total de puntos con los años y que pocos jugadores en 1980 alcanzaban un promedio de +25 puntos con respecto al año 2024.
 
+
+\section*{Criterio 5: Distribución de porcentajes de victorias con Defensive Win Shares (DWS).}
+
+En la NBA, existen estadísticas defensivas y ofensivas, pensando en las primeras existe un llamada DWS, que implica la contribución defensiva de los jugadores a lo largo de los encuentros y esta fue relaciona con el porcentaje de victorias de los equipos, esto surgió con el fin de hacer la pregunta si una buena defensa o alto porcentaje defensivo esta o no relaciona con la cantidad o porcentaje de victorias para averiguarlo usaremos un \textit{Swarm_plot}.
+
+
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Swarmplot.png}
+\end{center}
+
+\textbf{Conclusión:} Acá podemos observar que existe una gran concentración de puntos en la zona izquierda de la visualización indicando que no necesariamente un gran porcentaje defensivo, corresponderá a una alta cantidad de victorias esto se debe a la naturaleza misma del deporte ya que a diferencia de otras es claramente más difícil ganar partidos solo a base de una buena defensa, haciendo así de esto un deporte más de ida y vuelta, en el que se cambia de ataque a defensa y viceversa.
+
+\section*{Criterio 6: Porcentaje de robos de balón con el Porcentaje de Derrotas de partidos.}
+
+Siguiendo un poco el punto anterior ahora buscamos, ver como se relacionan los robos de balón con el porcentaje de derrotas de los equipos, preguntándonos cuanto afecta esto en el resultado de los encuentros disputados para ello usaremos un \textit{KDE2D}.
+
+
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{KDE2D.png}
+\end{center}
+
+\textbf{Conclusión:} En este gráfico podemos ver a través de una zona de calor, la tendencia de los datos, con el cual apreciamos que un bajo porcentaje de robos de balón no necesariamente esta relacionado con una menor cantidad de derrotas, de hecho el porcentaje de derrotas se centra más a la izquierda de la visualización, en la zona donde el porcentaje de robos de balón es más bajo.
+
+\section*{Trabajo Extra: Influencia de las estadísticas defensivas en el porcentaje de victorias de los equipos.}
+Para ver esta representación usaremos un \textit{Bubble Heatmap Scatter Plot}
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Figura_trabajo_extra.png}
+\end{center}
 
 \end{document}
